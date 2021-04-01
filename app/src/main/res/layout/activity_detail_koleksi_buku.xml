@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.DetailKoleksiBukuActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/image_koleksi"
+                android:layout_width="340dp"
+                android:layout_height="420dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:scaleType="centerCrop" />
+
+            <View
+                android:layout_width="match_parent"
+                android:visibility="visible"
+                android:layout_height="1dp"
+                android:background="@color/abuabu"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_pinjam_bukunya"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:text="Pinjam"
+                android:textColor="#FFFF"
+                android:layout_marginRight="1dp"
+                android:layout_marginLeft="1dp"
+                android:background="@drawable/button_pinjam"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_marginBottom="15dp">
+            </androidx.appcompat.widget.AppCompatButton>
+            <View
+                android:layout_width="match_parent"
+                android:visibility="visible"
+                android:layout_height="1dp"
+                android:background="@color/abuabu"/>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="Judul"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    <TextView
+                        android:id="@+id/judul_koleksi"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="1dp"
+                        android:text="judul"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:text="Edisi"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    <TextView
+                        android:id="@+id/edisi_koleksi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:textSize="15dp"
+                        android:text="Edisi"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="No. Panggil"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    <TextView
+                        android:id="@+id/no_panggil_koleksi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:textSize="15dp"
+                        android:text="No. panggil"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="ISBN/ISSN"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    <TextView
+                        android:id="@+id/isbn_koleksi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="1dp"
+                        android:textSize="15dp"
+                        android:text="Isbn/issn"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="Ditulis Oleh"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    <TextView
+                        android:id="@+id/ditulis_oleh_koleksi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:textSize="15dp"
+                        android:text="Status"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="Subyek/Subjek"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    <TextView
+                        android:id="@+id/subyek_koleksi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:textSize="15dp"
+                        android:text="Subyek/Subjek"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="Klasifikasi"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    <TextView
+                        android:id="@+id/klasifikasi_koleksi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:textSize="15dp"
+                        android:text="Klasifikasi"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="Judul Seri"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    <TextView
+                        android:id="@+id/judul_seri_koleksi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:textSize="15dp"
+                        android:text="Judul seri"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="GMD"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    <TextView
+                        android:id="@+id/gmd_koleksi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:textSize="15dp"
+                        android:text="GMD"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="Bahasa"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    <TextView
+                        android:id="@+id/bahasa_koleksi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:textSize="15dp"
+                        android:text="Bahasa"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="Penerbit"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    <TextView
+                        android:id="@+id/penerbit_koleksi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:textSize="15dp"
+                        android:text="Penerbit"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="Tahun Terbit"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    <TextView
+                        android:id="@+id/tahun_terbit_koleksi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:textSize="15dp"
+                        android:text="Tahun Terbit"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="Tempat Terbit"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    <TextView
+                        android:id="@+id/tempat_terbit_koleksi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:textSize="15dp"
+                        android:text="Tempat Terbit"
+                        android:layout_marginBottom="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Abstrak :"
+                android:textStyle="bold"
+                android:textSize="17dp"/>
+
+            <TextView
+                android:id="@+id/abstrak_koleksi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Abstrak"
+                android:layout_marginTop="5dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/Button_pdf"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="170dp"
+                    android:layout_height="43dp"
+                    android:textColor="#FFFF"
+                    android:text="PDF"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:background="@drawable/button_pinjam"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_marginBottom="15dp"
+                    android:drawablePadding="40dp"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

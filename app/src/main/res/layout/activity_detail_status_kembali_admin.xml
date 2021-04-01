@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.DetailStatusKembaliAdminActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="340dp"
+                android:layout_height="420dp"
+                android:id="@+id/image_detail_status_admin_kembali"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="10dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:visibility="visible"
+                android:layout_height="1dp"
+                android:background="@color/abuabu"/>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="Judul"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    <TextView
+                        android:id="@+id/judul_detail_status_admin_kembali"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="1dp"
+                        android:text="judul"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:text="Edisi"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    <TextView
+                        android:id="@+id/edisi_detail_status_admin_kembali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:textSize="15dp"
+                        android:text="Edisi"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="No. Panggil"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    <TextView
+                        android:id="@+id/no_panggil_detail_status_admin_kembali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:textSize="15dp"
+                        android:text="No. panggil"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="ISBN/ISSN"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    <TextView
+                        android:id="@+id/isbn_detail_status_admin_kembali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="1dp"
+                        android:textSize="15dp"
+                        android:text="Isbn/issn"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="Ditulis Oleh"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    <TextView
+                        android:id="@+id/ditulis_detail_status_admin_kembali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:textSize="15dp"
+                        android:text="Status"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="Subyek/Subjek"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    <TextView
+                        android:id="@+id/subjek_detail_status_admin_kembali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:textSize="15dp"
+                        android:text="Subyek/Subjek"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="Klasifikasi"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    <TextView
+                        android:id="@+id/klasifikasi_detail_status_admin_kembali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:textSize="15dp"
+                        android:text="Klasifikasi"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="Judul Seri"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    <TextView
+                        android:id="@+id/judul_seri_detail_status_admin_kembali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:textSize="15dp"
+                        android:text="Judul seri"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="GMD"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    <TextView
+                        android:id="@+id/gmd_detail_status_admin_kembali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:textSize="15dp"
+                        android:text="GMD"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="Bahasa"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    <TextView
+                        android:id="@+id/bahasa_detail_status_admin_kembali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:textSize="15dp"
+                        android:text="Bahasa"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="Penerbit"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    <TextView
+                        android:id="@+id/penerbit_detail_status_admin_kembali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:textSize="15dp"
+                        android:text="Penerbit"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="Tahun Terbit"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    <TextView
+                        android:id="@+id/tahun_terbit_detail_status_admin_kembali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:textSize="15dp"
+                        android:text="Tahun Terbit"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="Tempat Terbit"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    <TextView
+                        android:id="@+id/tempat_terbit_detail_status_admin_kembali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:textSize="15dp"
+                        android:text="Tempat Terbit"
+                        android:layout_marginBottom="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                </TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Abstrak :"
+                    android:textStyle="bold"
+                    android:textSize="17dp"/>
+
+                <TextView
+                    android:id="@+id/abstrak_detail_status_admin_kembali"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Abstrak"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:visibility="visible"
+                    android:layout_height="1dp"
+                    android:background="@color/abuabu"
+                    android:layout_marginBottom="20dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:text="Data peminjam"
+                    android:layout_marginBottom="10dp"/>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="Nama"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    <TextView
+                        android:id="@+id/nama_peminjam_detail_status_admin_kembali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:textSize="15dp"
+                        android:text="Nama"
+                        android:layout_marginBottom="1dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="NIM"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    <TextView
+                        android:id="@+id/nim_peminjam_detail_status_admin_kembali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:textSize="15dp"
+                        android:text="NIMt"
+                        android:layout_marginBottom="1dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="Prodi"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    <TextView
+                        android:id="@+id/prodi_peminjam_detail_status_admin_kembali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:textSize="15dp"
+                        android:text="Prodi"
+                        android:layout_marginBottom="1dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="Tanggal Pinjam"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                    <TextView
+                        android:id="@+id/tanggal_peminjam_detail_status_admin_kembali"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:textSize="15dp"
+                        android:text="Tanggal pinjam_detail_status_admin_kembali"
+                        android:layout_marginBottom="1dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

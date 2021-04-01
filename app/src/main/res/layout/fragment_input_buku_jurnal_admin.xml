@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.InputBukuJurnalAdminFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:hint="Judul"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/color"
+            app:hintTextColor="@color/color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/judul_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:hint="Ditulis Oleh"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/color"
+            app:hintTextColor="@color/color">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ditulis_oleh_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:hint="Penerbit"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/color"
+            app:hintTextColor="@color/color">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/penerbit_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:hint="Tahun_terbit"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/color"
+            app:hintTextColor="@color/color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tahun_terbit_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:hint="Stok Buku"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/color"
+            app:hintTextColor="@color/color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/stok_buku_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/image_create"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_marginRight="25dp"
+                android:inputType="text"
+                android:src="@drawable/pdf" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_image_create_admin"
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/grid_hijau"
+                android:text="IMG"
+                android:textColor="#FFFF"></androidx.appcompat.widget.AppCompatButton>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@color/color"
+                app:hintTextColor="@color/color">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nama_pdf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_pdf_create_admin"
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="120dp"
+                android:background="@drawable/grid_hijau"
+                android:text="PDF"
+                android:textColor="#FFFF"></androidx.appcompat.widget.AppCompatButton>
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/status"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:hint="Status"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/color"
+            app:counterMaxLength="30"
+            app:endIconMode="dropdown_menu"
+            app:hintTextColor="@color/color">
+
+            <AutoCompleteTextView
+                android:id="@+id/status_create"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/status_buku_jurnal"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:hint="Status_buku/jurnal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/color"
+            app:counterMaxLength="30"
+            app:endIconMode="dropdown_menu"
+            app:hintTextColor="@color/color">
+
+            <AutoCompleteTextView
+                android:id="@+id/status_create_buku_jurnal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:hint="Edisi"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/color"
+            app:hintTextColor="@color/color">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edisi_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:hint="No Panggil"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/color"
+            app:hintTextColor="@color/color">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/no_panggil_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:hint="ISBN/ISSN"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/color"
+            app:hintTextColor="@color/color">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/isbn_issn_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:hint="Subyek/Subjek"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/color"
+            app:hintTextColor="@color/color">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/subyek_subjek_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:hint="Klasifikasi"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/color"
+            app:hintTextColor="@color/color">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/klasifikasi_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:hint="Judul Seri"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/color"
+            app:hintTextColor="@color/color">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/judul_seri_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:hint="GMD"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/color"
+            app:hintTextColor="@color/color">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/gmd_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:hint="Bahasa"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/color"
+            app:hintTextColor="@color/color">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/bahasa_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:hint="Tempat Terbit"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/color"
+            app:hintTextColor="@color/color">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tempat_terbit_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:hint="Abstrak"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/color"
+            app:hintTextColor="@color/color">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/abstrak_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_tambah_data_admin"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/grid_hijau"
+            android:text="Tambah Data"
+            android:textColor="#FFFF"></androidx.appcompat.widget.AppCompatButton>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
