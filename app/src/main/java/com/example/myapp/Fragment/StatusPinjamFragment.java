@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -34,13 +35,8 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link KoleksiBukuFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class StatusPinjamFragment  extends Fragment {
-
+    SwipeRefreshLayout swipeRefreshLayout;
 
     public static final String TAG = "MYTAG";
     RequestQueue QUEUE;
@@ -68,6 +64,18 @@ public class StatusPinjamFragment  extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.fragment_status_pinjam, container, false);
 
+        swipeRefreshLayout = (SwipeRefreshLayout) rootView.findViewById(R.id.refresh_pinjam_pengguna);
+        swipeRefreshLayout.setColorScheme(android.R.color.holo_blue_bright,
+                android.R.color.holo_green_light,
+                android.R.color.holo_orange_light,
+                android.R.color.holo_red_light);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                httpGET(URLHTTP);
+            }
+        });
+
         rv = (RecyclerView) rootView.findViewById(R.id.recyclerView_statuspinjam);
         rv.setHasFixedSize(true);
         rv.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -94,6 +102,7 @@ public class StatusPinjamFragment  extends Fragment {
                     @Override
                     public void onResponse(String response) {
                         parsingData(response);
+                        swipeRefreshLayout.setRefreshing(false);
                     }
                 }, new Response.ErrorListener() {
             @Override

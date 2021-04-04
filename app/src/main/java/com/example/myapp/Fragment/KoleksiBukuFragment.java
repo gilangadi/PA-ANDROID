@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -39,6 +40,7 @@ import java.util.List;
  */
 public class KoleksiBukuFragment extends Fragment {
 
+    SwipeRefreshLayout swipeRefreshLayout;
 
     public static final String TAG = "MYTAG";
     RequestQueue QUEUE;
@@ -65,6 +67,19 @@ public class KoleksiBukuFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.fragment_koleksi_buku, container, false);
+        setHasOptionsMenu(true);
+
+        swipeRefreshLayout = (SwipeRefreshLayout) rootView.findViewById(R.id.refresh_koleksi_buku);
+        swipeRefreshLayout.setColorScheme(android.R.color.holo_blue_bright,
+                android.R.color.holo_green_light,
+                android.R.color.holo_orange_light,
+                android.R.color.holo_red_light);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                httpGET(URLHTTP);
+            }
+        });
 
         rv = (RecyclerView) rootView.findViewById(R.id.recyclerView_kolesib);
         rv.setHasFixedSize(true);
@@ -85,13 +100,13 @@ public class KoleksiBukuFragment extends Fragment {
         //2 KOLOM
         gridLayoutManager = new GridLayoutManager(getContext(), 2);
         rv.setLayoutManager(gridLayoutManager);
-
         mRecyclerViewItems.clear();
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         parsingData(response);
+                        swipeRefreshLayout.setRefreshing(false);
                     }
                 }, new Response.ErrorListener() {
             @Override
@@ -110,6 +125,7 @@ public class KoleksiBukuFragment extends Fragment {
 
     public void parsingData(String jsonData) {
         try {
+            swipeRefreshLayout.setRefreshing(false);
             JSONArray obj = new JSONArray(jsonData);
             for (int i = 0; i < obj.length(); i++) {
                 JSONObject jo_inside = obj.getJSONObject(i);
@@ -163,6 +179,7 @@ public class KoleksiBukuFragment extends Fragment {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+        swipeRefreshLayout.setRefreshing(false);
     }
 
 }

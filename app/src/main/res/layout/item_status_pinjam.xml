@@ -10,7 +10,8 @@
     android:orientation="horizontal"
     android:clickable="true"
     android:id="@+id/cardview_pinjam"
-    android:foreground="?android:attr/selectableItemBackground">
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardBackgroundColor="#F0F8FF">
 
     <LinearLayout
         android:orientation="vertical"
@@ -44,7 +45,8 @@
             android:textSize="12sp"
             android:id="@+id/pengarang_jurnal"
             android:text="Authdor"
-            android:layout_marginLeft="15dp" />
+            android:layout_marginLeft="15dp"
+            android:textColor="#38ACEC"/>
 
         <TextView
             android:layout_width="match_parent"

@@ -57,10 +57,10 @@ public class AdapterStatusPinjamAdmin extends RecyclerView.Adapter<RecyclerView.
         menuItemHolder.judul.setText(fp.getJudul());
         menuItemHolder.ditulis_oleh.setText(fp.getDitulis_oleh());
         menuItemHolder.tahun_terbit.setText(fp.getTahun_Terbit());
-        Glide.with(mContext)
-                .load(Api.BASE_URL + "/uploads/" + fp.getUrlimages())
-                .override(900, 250)
-                .into(menuItemHolder.urlimages);
+//        Glide.with(mContext)
+//                .load(Api.BASE_URL + "/uploads/" + fp.getUrlimages())
+//                .override(900, 250)
+//                .into(menuItemHolder.urlimages);
 
         menuItemHolder.nama.setText(fp.getNama());
         menuItemHolder.nim.setText(fp.getNim());
@@ -142,7 +142,7 @@ public class AdapterStatusPinjamAdmin extends RecyclerView.Adapter<RecyclerView.
             judul = (TextView) itemLayoutView.findViewById(R.id.judul_admin_status);
             ditulis_oleh = (TextView) itemLayoutView.findViewById(R.id.pengarang_admin_status);
             tahun_terbit = (TextView) itemLayoutView.findViewById(R.id.tahun_terbit_admin_status);
-            urlimages = (ImageView) itemLayoutView.findViewById(R.id.thumbnail_admin_status);
+//            urlimages = (ImageView) itemLayoutView.findViewById(R.id.thumbnail_admin_status);
             lineLayout = (LinearLayout) itemLayoutView.findViewById(R.id.linier_admin);
             nama = (TextView) itemLayoutView.findViewById(R.id.namapeminjam);
             nim = (TextView) itemLayoutView.findViewById(R.id.nimpeminjam);

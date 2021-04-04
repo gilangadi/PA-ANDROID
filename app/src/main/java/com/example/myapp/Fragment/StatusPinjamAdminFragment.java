@@ -64,6 +64,9 @@ public class StatusPinjamAdminFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.fragment_status_pinjam_admin, container, false);
 
+//        //2 KOLOM
+//        gridLayoutManager = new GridLayoutManager(getContext(), 2);
+//        rv.setLayoutManager(gridLayoutManager);
         //
         mRecyclerViewItems = new ArrayList<>();
 

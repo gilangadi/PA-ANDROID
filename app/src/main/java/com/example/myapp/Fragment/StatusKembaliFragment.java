@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -44,7 +45,7 @@ import java.util.List;
  */
 public class StatusKembaliFragment   extends Fragment {
 
-
+    SwipeRefreshLayout swipeRefreshLayout;
     public static final String TAG = "MYTAG";
     RequestQueue QUEUE;
     String URLHTTP;
@@ -71,6 +72,17 @@ public class StatusKembaliFragment   extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.fragment_status_kembali, container, false);
 
+        swipeRefreshLayout = (SwipeRefreshLayout) rootView.findViewById(R.id.refresh_kembalian_pengguna);
+        swipeRefreshLayout.setColorScheme(android.R.color.holo_blue_bright,
+                android.R.color.holo_green_light,
+                android.R.color.holo_orange_light,
+                android.R.color.holo_red_light);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                httpGET(URLHTTP);
+            }
+        });
 
         rv = (RecyclerView) rootView.findViewById(R.id.recyclerView_status_kembali_pengguna);
         rv.setHasFixedSize(true);
@@ -98,6 +110,7 @@ public class StatusKembaliFragment   extends Fragment {
                     @Override
                     public void onResponse(String response) {
                         parsingData(response);
+                        swipeRefreshLayout.setRefreshing(false);
                     }
                 }, new Response.ErrorListener() {
             @Override

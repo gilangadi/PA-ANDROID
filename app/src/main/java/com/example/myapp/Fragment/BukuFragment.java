@@ -56,6 +56,7 @@ public class BukuFragment extends Fragment {
 
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+
   }
 
   //SEARCHVIEW
@@ -94,8 +95,17 @@ public class BukuFragment extends Fragment {
     final View rootView = inflater.inflate(R.layout.fragment_buku, container, false);
     setHasOptionsMenu(true);
 
-    swipeRefreshLayout=(SwipeRefreshLayout) rootView.findViewById(R.id.swipe_refresh_layout_pengguna);
-    swipeRefreshLayout.setOnRefreshListener(getContext());
+    swipeRefreshLayout = (SwipeRefreshLayout) rootView.findViewById(R.id.swipe_refresh_layout_pengguna);
+    swipeRefreshLayout.setColorScheme(android.R.color.holo_blue_bright,
+            android.R.color.holo_green_light,
+            android.R.color.holo_orange_light,
+            android.R.color.holo_red_light);
+    swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+      @Override
+      public void onRefresh() {
+        httpGET(URLHTTP);
+      }
+    });
 
     mRecyclerViewItems = new ArrayList<>();
     rv = (RecyclerView) rootView.findViewById(R.id.recyclerView_buku);
@@ -117,6 +127,8 @@ public class BukuFragment extends Fragment {
               @Override
               public void onResponse(String response) {
                 parsingData(response);
+
+                swipeRefreshLayout.setRefreshing(false);
               }
             }, new Response.ErrorListener() {
       @Override
@@ -135,9 +147,8 @@ public class BukuFragment extends Fragment {
 
   public void parsingData(String jsonData) {
 
-    swipeRefreshLayout.setRefreshing(true);
-    
     try {
+      swipeRefreshLayout.setRefreshing(false);
       JSONObject obj = new JSONObject(jsonData);
       JSONArray m_jArry = obj.getJSONArray("data");
       for (int i = 0; i < m_jArry.length(); i++) {
@@ -191,6 +202,7 @@ public class BukuFragment extends Fragment {
     } catch (JSONException e) {
       e.printStackTrace();
     }
+    swipeRefreshLayout.setRefreshing(false);
   }
 
   public void searchbuku(String query) {
@@ -264,6 +276,8 @@ public class BukuFragment extends Fragment {
         } catch (UnsupportedEncodingException errorr) {
           Log.d(TAG, errorr.toString());
         }
+        // Stopping swipe refresh
+
       }
     });
     QUEUE.getCache().clear();

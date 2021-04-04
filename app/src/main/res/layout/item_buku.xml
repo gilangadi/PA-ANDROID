@@ -10,13 +10,16 @@
     android:orientation="horizontal"
     android:clickable="true"
     android:foreground="?android:attr/selectableItemBackground"
-    android:id="@+id/cardview_buku">
+    android:id="@+id/cardview_buku"
+    app:cardBackgroundColor="#F0F8FF">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/linier_buku">
+        android:id="@+id/linier_buku"
+        android:outlineAmbientShadowColor="@color/blue_btn_bg_pressed_color"
+        >
 
         <ImageView
             android:layout_gravity="center"
@@ -44,7 +47,8 @@
             android:textSize="12sp"
             android:id="@+id/ditulis_oleh"
             android:text="Authdor"
-            android:layout_marginLeft="15dp" />
+            android:layout_marginLeft="15dp"
+            android:textColor="#38ACEC"/>
 
         <TextView
             android:layout_width="match_parent"
